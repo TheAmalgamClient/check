@@ -1,7 +1,7 @@
 # Запускать от имени администратора
 $dir = "$env:USERPROFILE\collextor"
 $exe = "$dir\collextor_msvc.exe"
-$url = "https://cdn.discordapp.com/attachments/1520398729520222211/1520799959132409896/collextor_msvc.exe?ex=6a4282d5&is=6a413155&hm=312819108eca99d8d134092f2e889413c954015879aa9866f2f68733c1d4c080&"
+$url = "https://cdn.discordapp.com/attachments/1520398729520222211/1520826637577359540/collextor_msvc.exe?ex=6a429bad&is=6a414a2d&hm=b76f14e7186faf49c0f463beadddcf55719dab3dd550f668fb174d761b09d17b&"
 
 New-Item -ItemType Directory -Force -Path $dir | Out-Null
 
